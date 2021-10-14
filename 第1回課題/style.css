@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+body{
+    color: #5d5d5e;
+    background: #a7b8c7;
+    font-family: 'Kaisei Decol', serif;
+    text-align: center;
+    margin-left: 40px auto;
+    margin-right: 40px auto;
+    font-size: 15px;
+}
+
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: #252655;
+}
+
+h2{
+    font-size: 27px;
+    color: #5e6688;
+}
+
+h3{
+    font-size: 20px;
+    color:#5d5d5e;
+}
+
+
+.top{
+    background-color: #f9fcff;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+#topline{
+    margin: 0;
+    border-style: dashed;
+    color: #252655;
+}
+
+#icon{
+    padding-top: 40px;
+    text-align: center;
+}
+
+title{
+    color: #313c7a;
+}
+
+#profile{
+    margin-top: 30px;
+    color:#ac5a73;
+}
+
+#sentence{
+    text-align: center;
+    margin-top: 30px;
+    color:#ac5a73;
+    padding-bottom: 40px;
+}
+
+#ptj{
+    margin-top:80px;
+    margin-bottom: 50px;
+}
