@@ -1,0 +1,121 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+    width:100%;
+    background-color: #ecf0f5;
+    font-family: 'Yomogi', cursive;
+}
+header{
+    background-color: #fff;
+    text-align: center;
+    color: #4c6278;
+}
+main{
+    width:100%;
+    display: block;
+    position:relative;
+}
+footer{
+    background-color: #fff;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: #4c6278;
+    font-size: 20px
+}
+h2{
+    text-align: center;
+    color: #d3909b;
+    font-size: 25px;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    height:200px;
+}
+ul{
+    padding: 0;
+    display:flex;
+    flex-flow: column;
+    width:20%;
+    font-size: 80%;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    
+
+}
+li{
+    margin-bottom: 10px;
+    list-style-type:none;
+    background-color: #dbc8d7;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+    color:#c08598;
+    border-style: solid;
+    border-width: 0.7px;
+    border-color: #c08598;
+}
+li:hover{
+    background-color: #c08598;
+    color:#fff;
+}
+textarea{
+    font-family: 'Yomogi', cursive;
+    margin: 10px 15%;
+    width: 70%;
+    height: 150px;
+    font-size: 50%;
+    background-color:#ffffff;
+    border-color: #9ea9b4;
+}
+#ymd{
+    margin: 10px 25%;
+}
+#date{
+    text-align: center;
+    font-family: 'Yomogi', cursive;
+    width: 27%;
+    font-size:70%;
+    background-color: #dde6ef;
+    border-color: #9ea9b4;
+}
+#month{
+    text-align: center;
+    font-family: 'Yomogi', cursive;
+    width: 27%;
+    font-size:70%;
+    background-color: #dde6ef;
+    border-color: #9ea9b4;
+}
+#year{
+    text-align: center;
+    font-family: 'Yomogi', cursive;
+    width: 27%;
+    font-size:70%;
+    background-color: #dde6ef;
+    border-color: #9ea9b4;
+}
+
+table{
+    width:70%;
+    margin: 20px 15%;
+    padding-bottom: 20px;
+}
+th{
+    margin: 20px 15%;
+    width:30%;
+    font-size:24px;
+    background-color:#dde6ef;
+    border: 2px solid #9ea9b4;
+}
+td{
+    margin: 20px 15%;
+    font-size:16px;
+    background-color:#fff;
+    border: 2px solid #9ea9b4;
+    word-wrap: break-word;
+}
