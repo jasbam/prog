@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<title>js09</title>
+</head>
+<body>
+
+<header>
+    <h3 id = "title">クイズ池山</h3>
+</header>
+
+<main>
+  <div id = "my">
+    <h2>私に関するクイズです。</h2>
+    <h2>これを機にあわよくばクラスメイトと仲良くなれたらなっていう魂胆です。</h2>
+    <h2>すいませんでした。</h2>
+  </div>
+
+  <div id = "block1">
+    <p id="quest">ここに問題が出題されます</p>
+    <div id="result"></div>
+    <p id="ttt">
+      <input type="button" id="button1" style="width: 30%; padding: 8px; font-size: 25px;" name="toi" value="1"><br><span id="toi1">選択肢１</span><br>
+      <input type="button" id="button2" style="width: 30%; padding: 8px; font-size: 25px;"  name="toi" value="2"><br><span id="toi2">選択肢２</span><br>
+      <input type="button" id="button3" style="width: 30%; padding: 8px; font-size: 25px;" name="toi" value="3"><br><span id="toi3">選択肢３</span><br>
+    </p>
+  </div>
+
+  <div id = "block2" class="display_non">
+    <h1>結果</h1>
+    <div id = "k">
+      <input id = "kekka" type="text" size= "20">問正解！</input>
+    </div>
+    <div id ="com"></div>
+    <br>
+    <br>
+    <br>
+    <li id ="hb">
+      <a href="js09.html">最初へ戻る</a>
+    </li>
+  </div>
+</main>
+
+</body>
+
+
+
+<script>
+//ボタンの設定
+  const button1 = document.getElementById("button1");
+  button1.style.borderRadius = "20px"
+  button1.style.backgroundColor = "#f0dfdf";
+  button1.addEventListener('mouseout', () => {
+    button1.style.backgroundColor = "#f0dfdf";
+  });
+  button1.addEventListener('mouseover', () => {
+    button1.style.backgroundColor = "#E9A6A6";
+  });
+
+  const button2 = document.getElementById("button2");
+  button2.style.borderRadius = "20px"
+  button2.style.backgroundColor = "#f0dfdf";
+  button2.addEventListener('mouseout', () => {
+    button2.style.backgroundColor = "#f0dfdf";
+  });
+  button2.addEventListener('mouseover', () => {
+    button2.style.backgroundColor = "#E9A6A6";
+  });
+
+  const button3 = document.getElementById("button3");
+  button3.style.borderRadius = "20px"
+  button3.style.backgroundColor = "#f0dfdf";
+  button3.addEventListener('mouseout', () => {
+    button3.style.backgroundColor = "#f0dfdf";
+  });
+  button3.addEventListener('mouseover', () => {
+    button3.style.backgroundColor = "#E9A6A6";
+  });
+
+  //問題文
+  const qs =[
+  "池山の生まれた土地は？",
+  "池山の血液型は？",
+  "池山の座右の銘は？",
+  "池山の好きなお菓子は？",
+  "池山の好きな俳優は？",
+  "池山の好きなキャラクターは？"
+  ];
+    
+  //回答選択肢
+  let toi = [
+  ["神奈川","兵庫","鹿児島"],
+  ["A","B","AB"],
+  ["七転び八起き","画竜点睛","諸行無常"],
+  ["ポテチ","グミ","じゃがりこ"],
+  ["新田真剣佑","竹野内豊","遠藤憲一"],
+  ["ますお","まりお","ゆきお"]
+  ];
+    
+  //答え
+  const ans = [1, 3, 3, 2, 2, 3];
+
+  //問題文、回答選択肢、回答値の設定
+  let i = 0;
+  let j = 0;
+  $("#quest").text( qs[i] );
+  $("#toi1").text( toi[i][0] );
+  $("#toi2").text( toi[i][1] );
+  $("#toi3").text( toi[i][2] );
+  $("#toi3").text( toi[i][4] );
+  $("#toi3").text( toi[i][5] );
+  $("#toi3").text( toi[i][6] );
+
+
+  //ボタンを押したら正解、不正解判定
+  $("[name=toi]").on("click",function(){
+    const v = $(this).val();
+    if(ans[i] == v){
+      $("#result").text("正解");
+      j++;
+    }else{
+      $("#result").text("不正解");
+    }
+    i ++; //配列に入れるiが１プラスされる
+
+
+    if(i == 6){
+      //alert(j);
+      const div = document.getElementById('block2');
+      div.classList.remove('display_non');
+      const div2 = document.getElementById('block1');
+      div2.classList.add('display_non');
+      document.getElementById("kekka").value = j; //正解数をカウント
+      
+      //正解数によってコメント表示
+      if(j<4){
+        $("#com").append("<h2>これからたくさん知ってくださいね💗</h2>");
+      }else if(j>3 && j<6){
+        $("#com").append("<h2>知ってくれてありがとうございます！</h2>");
+      }else if(j>5){
+        $("#com").append("<h2>全問正解！</h2>");
+        $("#com").append("<h2>もしかして、、マブダチ？?</h2>");
+      }
+    }
+
+
+    $("#quest").text( qs[i] );
+    $("#toi1").text( toi[i][0] );
+    $("#toi2").text( toi[i][1] );
+    $("#toi3").text( toi[i][2] );
+  });
+
+
+</script>
+</body>
+</html>
