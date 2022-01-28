@@ -1,0 +1,143 @@
+a{
+    text-decoration: none;
+    font-family: 'Yusei Magic';
+}
+
+body{
+    color: #5a5b66;
+    background: #cbd3e2;
+    font-family: 'Yusei Magic';
+    font-style: normal;
+    text-align: center;
+    margin-left: 40px auto;
+    margin-right: 40px auto;
+    font-size: 15px;
+}
+
+ul{
+    padding: 0;
+    display:table;
+    table-layout: fixed;
+    width:100%;
+    font-size: 30px;
+    color: rgb(78, 85, 103);
+}
+
+li{
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(78, 85, 103);
+}
+
+li:hover{
+    background: #939bc0;
+    color:#fff;
+}
+
+
+#header{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    text-align: center;
+}
+
+main{
+    background-color: #fff;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.menu{
+    width: 50%;
+    min-width: 200px;
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 13px;
+    margin-left: 60%;
+    margin-right: 30%;
+    display:table-cell;
+    list-style-type: none;
+}
+
+.tab-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin:20px 0;
+}
+
+.tab-wrap:after {
+    content: '';
+    width: 50%;
+    height: 3px;
+    display: block;
+    order: -1;
+}
+.tab-label {
+    color: White;
+    background: LightGray;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px .5em;
+    order: -1;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    flex: 1;
+}
+.tab-label:not(:last-of-type) {
+    margin-right: 5px;
+}
+.tab-content {
+    width: 60%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+/* アクティブなタブ */
+.tab-switch:checked+.tab-label {
+    background: DeepSkyBlue;
+}
+.tab-switch:checked+.tab-label+.tab-content {
+    height: 450px;
+    overflow: auto;
+    padding: 10px;
+    opacity: 1;
+    transition: .5s opacity;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+/* ラジオボタン非表示 */
+.tab-switch {
+    display: none;
+}
+
+.mainb{
+    display: flex;
+}
+
+.mainc{
+    margin-left: 300px;
+    position: relative;
+    margin-top: 50px;
+
+}
+
+#tops{
+    text-align: center;
+    margin-left: 40px auto;
+    margin-right: 40px auto;
+
+}
+
+/* #top1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 80%;
+    left: 55%;
+} */

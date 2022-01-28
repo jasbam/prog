@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mell Closet</title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/cmanObjMove_v091.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <div id = "logo">
+        <img src = images/icon.png width = 15% alt = "mell closet logo">
+    </div>
+    <nav>
+        <div id ="menu">
+            <ul>
+            <li><a href="main.html">あそぶ</a></li>
+            <li><a href="tutorial.html">あそびかた</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class ="mainb">
+        <div class="mainc">
+            <img src = images/chara.png width = 300px alt="character">
+        </div>
+        <div class="tab-wrap">
+            <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">トップス</label>
+            <div class="tab-content">
+                <div id="tops">
+                    <li id ="top1">
+                        <img src = images/top1.png width =300px>
+                    </li>
+                    <li id ="top2">
+                        <img src = images/top2.png width =300px>
+                    </li>
+                    <li id ="top3">
+                        <img src = images/top3.png width =300px>
+                    </li>
+                    <li id ="top4">
+                        <img src = images/top4.png width =300px>
+                    </li>
+                </div>
+            </div>
+            <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">ボトムス</label>
+            <div class="tab-content">
+                <div id="btms">
+                    <li id ="btm1">
+                        <img src = images/btm1.png width =200px height=40%>
+                    </li>
+                    <li id ="btm2">
+                        <img src = images/btm2.png width =200px height=40%>
+                    </li>
+                    <li id ="btm3">
+                        <img src = images/btm3.png width =200px height=40%>
+                    </li>
+                    <li id ="btm4">
+                        <img src = images/btm4.png width =200px height=40%>
+                    </li>
+                </div>
+            </div>
+            <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">クツ</label>
+            <div class="tab-content">
+                <div id ="shoose">
+                    <li id="shoo1">
+                        <img src = images/shoo1.png width =400px>
+                    </li>
+                    <li id="shoo2">
+                        <img src = images/shoo2.png width =400px>
+                    </li>
+                    <li id="shoo3">
+                        <img src = images/shoo3.png width =400px>
+                    </li>
+                    <li id="shoo4">
+                        <img src = images/shoo4.png width =400px>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <br>
+    <br>
+</footer>
+
+<script>    
+$('#top1').on('click',function(){
+    alert();
+    $("#mainc").html('<img src="images/top1.png" width=300px>');
+})
+$('#top2').on('click',function(){
+    alert();
+    $("#mainc").html('<img src="images/top2.png" width=300px>');
+})
+$('#top3').on('click',function(){
+    $("#mainc").html('<img src="images/top3.png" width=300px>');
+})
+$('#top4').on('click',function(){
+    $("#mainc").html('<img src="images/top4.png" width=300px>');
+})
+$('#btm1').on('click',function(){
+    $("#mainc").html('<img src="images/btm1.png" width=300px>');
+})
+$('#btm2').on('click',function(){
+    $("#mainc").html('<img src="images/btm2.png" width=300px>');
+})
+$('#btm3').on('click',function(){
+    $("#mainc").html('<img src="images/btm3.png" width=300px>');
+})
+$('#btm4').on('click',function(){
+    $("#mainc").html('<img src="images/btm4.png" width=300px>');
+})
+$('#shoo1').on('click',function(){
+    $("#mainc").html('<img src="images/shoo1.png" width=300px>');
+})
+$('#shoo2').on('click',function(){
+    $("#mainc").html('<img src="images/shoo2.png" width=300px>');
+})
+$('#shoo3').on('click',function(){
+    $("#mainc").html('<img src="images/shoo3.png" width=300px>');
+})
+$('#shoo4').on('click',function(){
+    $("#mainc").html('<img src="images/shoo4.png" width=300px>');
+})
+
+
+
+
+</script>
+
+</body>
+</html>
